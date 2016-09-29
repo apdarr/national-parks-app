@@ -18,7 +18,7 @@ common: &default_settings
 # If your application has other named environments, configure them here.
 development:
   <<: *default_settings
-  app_name: async_blog_app (Development)
+  app_name: national_parks_app (Development)
 
   # NOTE: There is substantial overhead when running in developer mode.
   # Do not use for production or load testing.
@@ -31,7 +31,7 @@ test:
 
 staging:
   <<: *default_settings
-  app_name: async_blog_app (Staging)
+  app_name: national_parks_app (Staging)
 
 production:
   <<: *default_settings
