@@ -1,8 +1,8 @@
 require 'net/http'
 
-desc "This pings the Heroku app's URL"
 
-task :start do
+desc "This pings the Heroku app's URL"
+task :ping do
   puts "Making an attempt to ping the web dyno"
 
   if ENV['URL']
