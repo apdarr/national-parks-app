@@ -1,7 +1,5 @@
 test do
-  defaults domain: 'https://national-parks-app.herokuapp.com/'
-
-  view_results_tree
-  summary_report
-  # threads(options) do ...
-end.run(gui: true)
+    thread count: 10 do
+      visit name: 'National Parks Home Page', url: 'https://national-parks-app.herokuapp.com'
+    end
+end.jmx
