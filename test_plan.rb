@@ -18,7 +18,8 @@ test do
             'park[name]' => 'Yellowstone',
             'park[journal]' => 'Sunny, warm',
             'commit' => 'Create Park'
-          }
+          } do
+        end
       end
     end
 end.run(path:'/app/vendor/apache-jmeter/apache-jmeter-3.1/bin/')
