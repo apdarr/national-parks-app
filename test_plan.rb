@@ -15,7 +15,7 @@ test do
 
       transaction 'posting a park' do
         get name: 'Parks/New', url: 'https://national-parks-app-prod.herokuapp.com/parks/new'
-
+        extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token'
         submit name: "adding Parks", url: "https://national-parks-app-prod.herokuapp.com/parks",
           fill_in: {
             'utf8' => '%E2%9C%93',
@@ -24,7 +24,7 @@ test do
             'park[journal]' => 'Sunny, warm',
             'commit' => 'Create Park'
           } do
-            extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token'
+              puts "hello"
           end
       end
 
