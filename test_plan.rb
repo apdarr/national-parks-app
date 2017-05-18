@@ -15,11 +15,11 @@ test do
 
       transaction 'posting a park' do
         get name: 'Parks/New', url: 'https://national-parks-app-prod.herokuapp.com/parks/new'
-        extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token'
+        csrf_token = app.response.body.match(/<[^<]+authenticity_token[^>]+value="([^"]+)"[^>]+>/)[1]
         submit name: "adding Parks", url: "https://national-parks-app-prod.herokuapp.com/parks",
           fill_in: {
             'utf8' => '%E2%9C%93',
-            'authenticity_token' => '${csrf-token}',
+            'authenticity_token' => '#{csrf_token}',
             'park[name]' => 'Yellowstone',
             'park[journal]' => 'Sunny, warm',
             'commit' => 'Create Park'
