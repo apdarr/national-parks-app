@@ -1,5 +1,5 @@
 require 'net/http'
-
+#scheduler testing
 desc "This pings the Heroku app's URL"
 task :ping do
   puts "Making an attempt to ping the web dyno"
