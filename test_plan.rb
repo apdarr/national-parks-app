@@ -10,8 +10,8 @@ test do
       visit name: "Parks", url: "https://national-parks-app-prod.herokuapp.com/" do
       end
 
-      submit url: "https://national-parks-app-prod.herokuapp.com/parks",
-        extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token',
+      submit url: "https://national-parks-app-prod.herokuapp.com/parks"
+        extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token'
         fill_in: {
           'utf8' => '%E2%9C%93',
           'authenticity_token' => '${csrf-token}',
