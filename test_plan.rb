@@ -23,7 +23,7 @@ test do
         submit name: "adding Parks", url: "https://national-parks-app.herokuapp.com/parks",
           fill_in: {
             'utf8' => '%E2%9C%93',
-            #turn off auth token: 'authenticity_token' => csrf_token,
+            'authenticity_token' => null,
             'park[name]' => 'Yellowstone',
             'park[journal]' => 'Sunny, warm',
             'commit' => 'Create Park'
