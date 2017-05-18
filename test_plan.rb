@@ -5,8 +5,7 @@ test do
     threads count: 2 do
       #transaction 'vist_home_page' do
 
-      visit name: "Parks", url: "https://national-parks-app-prod.herokuapp.com/" do
-
+      #visit name: "Parks", url: "https://national-parks-app-prod.herokuapp.com/" do
         visit name: "Parks/New", url: "https://national-parks-app.herokuapp.com/parks/new" do
           extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token'
           submit url: "https://national-parks-app-prod.herokuapp.com/parks",
@@ -18,6 +17,6 @@ test do
               'commit' => 'Create Park'
             }
         end
-      end
+    #  end
     end
 end.run(path:'/app/vendor/apache-jmeter/apache-jmeter-3.1/bin/')
