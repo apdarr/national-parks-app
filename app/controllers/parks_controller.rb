@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create]
   before_action :set_park, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token
   # GET /parks
   # GET /parks.json
   def index
