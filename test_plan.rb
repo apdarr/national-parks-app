@@ -16,7 +16,6 @@ test do
               'park[journal]' => 'Sunny, warm',
               'commit' => 'Create Park'
             }
-          end
         end
     #  end
     end
