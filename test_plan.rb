@@ -6,7 +6,7 @@ test do
       #transaction 'vist_home_page' do
 
       #visit name: "Parks", url: "https://national-parks-app-prod.herokuapp.com/" do
-        visit name: "Parks/New", url: "https://national-parks-app.herokuapp.com/parks/new" do
+        visit name: "Parks/New", url: "https://national-parks-app-prod.herokuapp.com/parks/new" do
           extract regex: "content='(.+?)' name='csrf-token'", name: 'csrf-token'
           submit url: "https://national-parks-app-prod.herokuapp.com/parks",
             fill_in: {
