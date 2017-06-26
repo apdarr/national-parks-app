@@ -131,6 +131,7 @@ GEM
     ruby-jmeter (3.0.13)
       nokogiri
       rest-client
+    ruby-odbc (0.99998)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -184,6 +185,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails_12factor
   ruby-jmeter
+  ruby-odbc
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
