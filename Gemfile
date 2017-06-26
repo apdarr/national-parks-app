@@ -22,6 +22,7 @@ gem 'puma'
 
 gem 'activerecord-odbc-adapter', '~> 2.0'
 
+gem 'ruby-odbc', '~> 0.99997'
 
 group :development, :test do
   gem 'byebug'
