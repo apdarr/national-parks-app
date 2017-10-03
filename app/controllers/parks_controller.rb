@@ -7,7 +7,7 @@ class ParksController < ApplicationController
     @parks = Park.all
     puts "Testing heroku CLI in a dyno"
     %x{heroku run ruby hello_world.rb -a national-parks-app}
-  endgit a
+  end
 
   # GET /parks/1
   # GET /parks/1.json
