@@ -22,4 +22,4 @@ test:
   database: db/test.sqlite3
 
 production:
-  url: <%= ENV["HEROKU_POSTGRESQL_ROSE_URLh"] %>
+  url: <%= ENV["HEROKU_POSTGRESQL_ROSE_URL"] %>
