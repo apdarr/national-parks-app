@@ -5,9 +5,9 @@ class ParksController < ApplicationController
   # GET /parks.json
   def index
     @parks = Park.all
-    puts "Testing heroku CLI in a dyno"
+    puts "Testing heroku CLI in a dyno -a national-parks-app"
     %x{heroku run ruby hello_world.rb}
-  end
+  endgit a
 
   # GET /parks/1
   # GET /parks/1.json
