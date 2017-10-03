@@ -6,7 +6,7 @@ class ParksController < ApplicationController
   def index
     @parks = Park.all
     puts "Testing heroku CLI in a dyno"
-    %x{heroku run bash --app national-parks-app}
+    %x{heroku run bundle exec rake db:migrate}
   end
 
   # GET /parks/1
