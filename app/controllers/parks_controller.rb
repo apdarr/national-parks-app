@@ -5,7 +5,7 @@ class ParksController < ApplicationController
   # GET /parks.json
   def index
     @parks = Park.all
-    system 'heroku run rails console' 
+    system "heroku run rails console -a national-parks-app" 
   end
 
   # GET /parks/1
