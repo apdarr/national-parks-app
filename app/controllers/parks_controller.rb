@@ -1,3 +1,6 @@
+require 'net/http'
+require 'uri'
+
 class ParksController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
   before_action :set_park, only: [:show, :edit, :update, :destroy]
@@ -5,8 +8,13 @@ class ParksController < ApplicationController
   # GET /parks.json
   def index
     @parks = Park.all
-    puts "Testing heroku CLI in a dyno"
-    %x{heroku run ruby hello_world.rb -a national-parks-app}
+    puts "Testing app routing against itself"
+
+    uri = URI.parse("https://national-parks-app.herokuapp.com/parks")
+    response = Net::HTTP.get_response(uri)
+
+    # Testing Heroku CLI in a dyno, below
+    # %x{heroku run ruby hello_world.rb -a national-parks-app}
   end
 
   # GET /parks/1
