@@ -8,7 +8,7 @@ class ParksController < ApplicationController
   # GET /parks.json
   def index
     @parks = Park.all
-    puts "Testing app routing against itself"
+    puts "Testing the app routing against itself"
 
     uri = URI.parse("https://national-parks-app.herokuapp.com/parks")
     response = Net::HTTP.get_response(uri)
