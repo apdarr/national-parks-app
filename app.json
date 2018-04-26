@@ -1,0 +1,114 @@
+{
+  "name": "national-parks-app",
+  "scripts": {
+  },
+  "env": {
+    "BUCKETEER_AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "BUCKETEER_AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "BUCKETEER_BUCKET_NAME": {
+      "required": true
+    },
+    "CODESHIP_ID": {
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "required": true
+    },
+    "HEROKU_POSTGRESQL_ROSE_URL": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "LIBRATO_PASSWORD": {
+      "required": true
+    },
+    "LIBRATO_TOKEN": {
+      "required": true
+    },
+    "LIBRATO_USER": {
+      "required": true
+    },
+    "LOGDNA_KEY": {
+      "required": true
+    },
+    "NEW_RELIC_LICENSE_KEY": {
+      "required": true
+    },
+    "NEW_RELIC_LOG": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "PG_BOUNCER_DEFAULT_POOL_SIZE": {
+      "required": true
+    },
+    "PG_BOUNCER_RESERVE_POOL_SIZE": {
+      "required": true
+    },
+    "PGBOUNCER_PREPARED_STATEMENTS": {
+      "required": true
+    },
+    "QUOTAGUARDSTATIC_URL": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "REDIS_URL": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "TEST": {
+      "required": true
+    },
+    "URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "ruby-jmeter": {
+      "quantity": 1
+    },
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "bucketeer",
+    "codeship",
+    "herokuconnect",
+    "librato",
+    "logdna",
+    "newrelic",
+    "papertrail",
+    "heroku-postgresql",
+    "quotaguardstatic",
+    "heroku-redis",
+    "scheduler"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-apt"
+    },
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-cli"
+    }
+  ]
+}
