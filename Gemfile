@@ -8,8 +8,6 @@ gem 'librato-rails', '~> 1.4.2'
 
 gem 'uglifier', '>= 1.3.0'
 
-gem 'ruby-jmeter'
-
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'jquery-rails'
