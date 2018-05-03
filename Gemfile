@@ -24,6 +24,8 @@ gem 'activerecord-odbc-adapter', '~> 2.0'
 
 gem 'ruby-odbc'
 
+gem 'pg'
+
 group :development, :test do
   gem 'byebug'
 
@@ -38,8 +40,6 @@ end
 
 group :production do
   gem 'rails_12factor'
-
-  gem 'pg'
 
   gem 'heroku-deflater'
 end
