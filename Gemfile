@@ -24,7 +24,7 @@ gem 'activerecord-odbc-adapter', '~> 2.0'
 
 gem 'ruby-odbc'
 
-gem 'pg'
+gem 'pg', '~> 0.21'
 
 group :development, :test do
   gem 'byebug'
